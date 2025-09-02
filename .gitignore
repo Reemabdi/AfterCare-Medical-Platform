@@ -1,0 +1,25 @@
+# Visual Studio cache
+.vs/
+*.user
+*.suo
+
+# Build outputs
+bin/
+obj/
+[Bb]uild/
+[Ll]og/
+
+# NuGet packages (يمكن استرجاعها)
+packages/
+
+# IIS Express
+*.vspscc
+*.vssscc
+
+# Publish output
+*.Publish.xml
+
+# Backup and temporary files
+*.tmp
+*.bak
+*.swp
