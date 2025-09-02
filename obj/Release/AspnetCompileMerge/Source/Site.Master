@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Final11373.SiteMaster" %>
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Aftercare Platform</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" runat="server" />
+    <link href="~/Content/styles.css" rel="stylesheet" runat="server" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" />
+</head>
+<body>
+<form id="form1" runat="server">
+    <header class="page-header">
+        <div class="header-title">
+            <a href="<%= ResolveUrl("~/Patient/pHome.aspx") %>" class="nav-title">🩺 Aftercare Platform</a>
+        </div>
+      <nav class="nav-buttons">
+    <a class="nav-btn" href="<%= ResolveUrl("~/Patient/pHome.aspx") %>">Home</a>
+              <a href="<%= ResolveUrl("~/Patient/About.aspx") %>" class="btn btn-primary">About</a>
+    <a class="nav-btn" href="<%= ResolveUrl("~/Patient/PatientDashboard.aspx") %>">Patient Dashboard</a>
+    <a class="nav-btn" href="<%= ResolveUrl("~/Patient/sendEmail.aspx") %>">Send Email</a>
+    <a class="nav-btn" href="<%= ResolveUrl("~/Admin/InstructionsList.aspx") %>">Instruction List</a>
+    <asp:Button ID="btnLogout" runat="server" CssClass="nav-btn" Text="Logout" OnClick="btnLogout_Click" />
+</nav>
+
+    </header>
+
+    <asp:ScriptManager runat="server" />
+
+    <main class="container body-content">
+        <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        <hr />
+        <footer>
+            <p>&copy; <%: DateTime.Now.Year %> - Aftercare Platform</p>
+        </footer>
+    </main>
+</form>
+</body>
+</html>
